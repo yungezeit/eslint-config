@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [],
+  "linked": [
+    [
+      "@yungezeit/eslint-config",
+      "@yungezeit/eslint-config-base",
+      "@yungezeit/eslint-config-typescript",
+      "@yungezeit/eslint-config-react",
+      "@yungezeit/eslint-config-vue",
+      "@yungezeit/eslint-config-svelte"
+    ]
+  ],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}

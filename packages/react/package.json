@@ -1,0 +1,34 @@
+{
+  "name": "@yungezeit/eslint-config-react",
+  "version": "0.0.4",
+  "description": "Personal React ESLint config",
+  "author": "Charles Gruenais",
+  "license": "MIT",
+  "homepage": "https://github.com/yungezeit/eslint-config/tree/main/packages/react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yungezeit/eslint-config.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/yungezeit/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "yungezeit",
+    "typescript",
+    "react"
+  ],
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "@yungezeit/eslint-config-typescript": "workspace:*",
+    "eslint-plugin-react": "^7.30.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@yungezeit/eslint-config-root",
+  "version": "0.0.4",
+  "private": true,
+  "packageManager": "pnpm@7.1.7",
+  "description": "Personal ESLint config presets based on airbnb rules and other recommended presets.",
+  "author": "Charles Gruenais",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./packages/**/* --fix",
+    "changeset": "changeset",
+    "prerelease": "pnpm run lint && pnpm run changeset",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.5",
+    "@changesets/cli": "^2.23.0",
+    "@yungezeit/eslint-config-base": "workspace:*",
+    "eslint": "^8.18.0"
+  }
+}

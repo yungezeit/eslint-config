@@ -1,0 +1,132 @@
+module.exports = {
+  env: {
+    es6: true,
+    browser: true,
+    node: true,
+  },
+  extends: [
+    'airbnb-base',
+    'plugin:import/recommended',
+    'plugin:jsonc/recommended-with-jsonc',
+    'plugin:yml/standard',
+    'plugin:markdown/recommended',
+  ],
+  plugins: ['html'],
+  ignorePatterns: [
+    'CHANGELOG.md',
+    'dist',
+    'LICENSE*',
+    'coverage',
+    'public',
+    'temp',
+    'pnpm-lock.yaml',
+    '__snapshots__',
+    '!.github',
+    '!.vitepress',
+    '!.vscode',
+  ],
+  settings: {
+    'import/resolver': {
+      node: { extensions: ['.js', '.mjs'] },
+    },
+  },
+  rules: {
+    // The following rules have `@typescript-eslint` equivalents
+    'no-param-reassign': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    'no-use-before-define': 'off',
+    'quote-props': 'off',
+    quotes: ['error', 'single', { allowTemplateLiterals: true }],
+
+    'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'consistent-return': 'off',
+    'object-curly-newline': ['error', {
+      ImportDeclaration: 'never',
+      ExportDeclaration: { multiline: true, minProperties: 3 },
+    }],
+  },
+  overrides: [
+    // JSON files.
+    {
+      files: ['*.json', '*.json5'],
+      parser: 'jsonc-eslint-parser',
+    },
+    // YAML files.
+    {
+      files: ['*.yaml', '*.yml'],
+      parser: 'yaml-eslint-parser',
+    },
+    // Sort `package.json`.
+    {
+      files: ['package.json'],
+      parser: 'jsonc-eslint-parser',
+      rules: {
+        'jsonc/sort-keys': [
+          'error',
+          {
+            pathPattern: '^$',
+            order: [
+              'publisher',
+              'name',
+              'displayName',
+              'type',
+              'version',
+              'private',
+              'packageManager',
+              'description',
+              'author',
+              'license',
+              'funding',
+              'homepage',
+              'repository',
+              'bugs',
+              'keywords',
+              'categories',
+              'sideEffects',
+              'exports',
+              'main',
+              'module',
+              'unpkg',
+              'jsdelivr',
+              'types',
+              'typesVersions',
+              'bin',
+              'icon',
+              'files',
+              'engines',
+              'activationEvents',
+              'contributes',
+              'scripts',
+              'peerDependencies',
+              'peerDependenciesMeta',
+              'dependencies',
+              'optionalDependencies',
+              'devDependencies',
+              'pnpm',
+              'overrides',
+              'resolutions',
+              'husky',
+              'simple-git-hooks',
+              'lint-staged',
+              'eslintConfig',
+            ],
+          },
+          {
+            pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+            order: { type: 'asc' },
+          },
+          {
+            pathPattern: '^exports.*$',
+            order: [
+              'types',
+              'require',
+              'import',
+            ],
+          },
+        ],
+      },
+    },
+  ],
+};

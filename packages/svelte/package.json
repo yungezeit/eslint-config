@@ -1,0 +1,34 @@
+{
+  "name": "@yungezeit/eslint-config-svelte",
+  "version": "0.0.4",
+  "description": "Personal Svelte ESLint config",
+  "author": "Charles Gruenais",
+  "license": "MIT",
+  "homepage": "https://github.com/yungezeit/eslint-config/tree/main/packages/svelte",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yungezeit/eslint-config.git",
+    "directory": "packages/svelte"
+  },
+  "bugs": {
+    "url": "https://github.com/yungezeit/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "yungezeit",
+    "typescript",
+    "svelte"
+  ],
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "@yungezeit/eslint-config-typescript": "workspace:*",
+    "eslint-plugin-svelte3": "^4.0.0"
+  }
+}

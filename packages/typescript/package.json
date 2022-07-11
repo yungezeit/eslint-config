@@ -1,0 +1,37 @@
+{
+  "name": "@yungezeit/eslint-config-typescript",
+  "version": "0.0.4",
+  "description": "Personal TypeScript ESLint config",
+  "author": "Charles Gruenais",
+  "license": "MIT",
+  "homepage": "https://github.com/yungezeit/eslint-config/tree/main/packages/typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yungezeit/eslint-config.git",
+    "directory": "packages/typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/yungezeit/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "yungezeit",
+    "typescript"
+  ],
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@yungezeit/eslint-config-base": "workspace:*",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-import-resolver-typescript": "^2.5.0"
+  }
+}
