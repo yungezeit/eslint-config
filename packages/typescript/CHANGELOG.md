@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-typescript
 
+## 0.0.6
+
+### Patch Changes
+
+- a1bf2ce: Update overall config hierarchy
+- Updated dependencies [a1bf2ce]
+  - @yungezeit/eslint-config-base@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes
