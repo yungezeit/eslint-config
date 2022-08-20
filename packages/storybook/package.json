@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@yungezeit/eslint-config-base": "workspace:*",
+    "eslint-plugin-mdx": "^2.0.2",
     "eslint-plugin-storybook": "^0.5.12"
   }
 }

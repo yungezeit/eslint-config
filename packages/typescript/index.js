@@ -1,47 +1,71 @@
-const base = require('@yungezeit/eslint-config-base');
-
 module.exports = {
-  extends: [
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
-    'airbnb-typescript/base',
-    '@yungezeit/base',
-  ],
-  settings: {
-    'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
+  extends: '@yungezeit/base',
+  overrides: [
+    {
+      files: [
+        '*.js',
+        '*.jsx',
+        '*.cjs',
+        '*.mjs',
+        '*.ts',
+        '*.tsx',
+        '*.cts',
+        '*.mts',
+        '*.d.ts',
+        '*.vue',
+        '*.svelte',
+      ],
+      extends: [
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
+        'airbnb-typescript/base',
+      ],
+      overrides: [
+        {
+          files: ['**/*.test.ts'],
+          rules: {
+            'max-classes-per-file': 'off',
+            'no-new': 'off',
+          },
+        },
+      ],
+      rules: {
+        // Import configuration override.
+        // (@yungezeit/base overriden by current file's plugin:import/typescript)
+        'import/no-unresolved': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'import/prefer-default-export': 'off',
+        'import/no-named-as-default': 'off',
+        'import/no-cycle': 'off',
+
+        // TypeScript overrides.
+        'no-undef': 'off',
+        'naming-convention': 'off',
+        'no-unused-vars': 'off',
+        'no-use-before-define': 'off',
+        quotes: 'off',
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/naming-convention': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/quotes': ['error', 'single', { allowTemplateLiterals: true }],
+        '@typescript-eslint/no-useless-constructor': ['error'],
+        // TypeScript-specific rules.
+
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+
+        // The following rules require `parseOptions.project` to be set.
+        // This should be project-specific.
+        'no-throw-literal': 'off',
+        'no-implied-eval': 'off',
+        'dot-notation': 'off',
+        '@typescript-eslint/return-await': 'off',
+        '@typescript-eslint/no-throw-literal': 'off',
+        '@typescript-eslint/no-implied-eval': 'off',
+        '@typescript-eslint/dot-notation': 'off',
+      },
     },
-  },
-  ignorePatterns: [
-    '**/*.d.ts',
   ],
-  overrides: base.overrides,
-  rules: {
-    // TypeScript-only overrides.
-    'no-undef': 'off',
-    'import/extensions': 'off',
-
-    // TypeScript overrides.
-    '@typescript-eslint/no-param-reassign': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-    '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/quote-props': 'off',
-    '@typescript-eslint/quotes': ['error', 'single', { allowTemplateLiterals: true }],
-
-    // TypeScript-specific rules.
-    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-
-    // The following rules require `parseOptions.project` to be set.
-    // This should be project-specific.
-    'no-throw-literal': 'off',
-    '@typescript-eslint/no-throw-literal': 'off',
-    'no-implied-eval': 'off',
-    '@typescript-eslint/no-implied-eval': 'off',
-    '@typescript-eslint/return-await': 'off',
-    'dot-notation': 'off',
-    '@typescript-eslint/dot-notation': 'off',
-    '@typescript-eslint/naming-convention': 'off',
-  },
 };

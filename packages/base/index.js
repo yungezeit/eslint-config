@@ -4,61 +4,105 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-    'plugin:import/recommended',
-    'plugin:jsonc/recommended-with-jsonc',
-    'plugin:yml/standard',
-    'plugin:markdown/recommended',
-  ],
-  plugins: ['html'],
   ignorePatterns: [
     'CHANGELOG.md',
     'dist',
+    'lib',
     'LICENSE*',
     'coverage',
     'public',
     'temp',
+    'package-lock.json',
     'pnpm-lock.yaml',
     '__snapshots__',
     '!.github',
     '!.vitepress',
     '!.vscode',
   ],
-  settings: {
-    'import/resolver': {
-      node: { extensions: ['.js', '.mjs'] },
-    },
-  },
-  rules: {
-    // The following rules have `@typescript-eslint` equivalents
-    'no-param-reassign': 'off',
-    'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-    'no-use-before-define': 'off',
-    'quote-props': 'off',
-    quotes: ['error', 'single', { allowTemplateLiterals: true }],
-
-    'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
-    'import/no-extraneous-dependencies': 'off',
-    'import/prefer-default-export': 'off',
-    'consistent-return': 'off',
-    'object-curly-newline': ['error', {
-      ImportDeclaration: 'never',
-      ExportDeclaration: { multiline: true, minProperties: 3 },
-    }],
-  },
   overrides: [
+    // Source code.
+    {
+      files: [
+        '*.js',
+        '*.jsx',
+        '*.cjs',
+        '*.mjs',
+        '*.ts',
+        '*.tsx',
+        '*.cts',
+        '*.mts',
+        '*.d.ts',
+        '*.vue',
+        '*.svelte',
+      ],
+      plugins: ['html'],
+      extends: [
+        'airbnb-base',
+        'plugin:import/recommended',
+      ],
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: [
+              '.js',
+              '.jsx',
+              '.cjs',
+              '.mjs',
+              '.ts',
+              '.tsx',
+              '.cts',
+              '.mts',
+            ],
+          },
+        },
+      },
+      rules: {
+        'func-call-spacing': 'off',
+        'no-spaced-func': 'off',
+        'import/no-relative-packages': 'off',
+        'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+        'no-restricted-globals': 'off',
+        'no-restricted-syntax': 'off',
+        'no-underscore-dangle': 'off',
+        'no-promise-executor-return': 'off',
+        'no-param-reassign': 'off',
+        'no-sparse-arrays': 'off',
+        'no-use-before-define': 'off',
+        'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+        'class-methods-use-this': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'import/prefer-default-export': 'off',
+        'import/no-named-as-default': 'off',
+        'import/no-cycle': 'off',
+        'import/extensions': ['error', 'always', {
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        }],
+        'consistent-return': 'off',
+        'object-curly-newline': ['error', {
+          ImportDeclaration: 'never',
+          ExportDeclaration: { multiline: true, minProperties: 3 },
+        }],
+      },
+    },
     // JSON files.
     {
       files: ['*.json', '*.json5'],
-      parser: 'jsonc-eslint-parser',
+      extends: ['plugin:jsonc/recommended-with-jsonc'],
     },
     // YAML files.
     {
       files: ['*.yaml', '*.yml'],
-      parser: 'yaml-eslint-parser',
+      extends: ['plugin:yml/standard'],
     },
-    // Sort `package.json`.
+    // Markdown files.
+    {
+      files: ['*.md'],
+      extends: ['plugin:markdown/recommended'],
+    },
+    // Sort `package.json` properties.
     {
       files: ['package.json'],
       parser: 'jsonc-eslint-parser',

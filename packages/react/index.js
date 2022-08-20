@@ -1,18 +1,16 @@
 module.exports = {
-  extends: [
-    'plugin:react/recommended',
-    '@yungezeit/typescript',
-  ],
-  settings: {
-    react: {
-      version: '17.0',
+  extends: '@yungezeit/typescript',
+  overrides: [
+    {
+      files: ['*.tsx'],
+      extends: ['plugin:react/recommended'],
+      rules: {
+        'jsx-quotes': [
+          'error',
+          'prefer-double',
+        ],
+        'react/react-in-jsx-scope': 'off',
+      },
     },
-  },
-  rules: {
-    'jsx-quotes': [
-      'error',
-      'prefer-double',
-    ],
-    'react/react-in-jsx-scope': 'off',
-  },
+  ],
 };
