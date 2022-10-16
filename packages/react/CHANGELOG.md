@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-react
 
+## 0.0.7
+
+### Patch Changes
+
+- 7ae3d06: Force consistent type imports for TypeScript
+- Updated dependencies [7ae3d06]
+  - @yungezeit/eslint-config-typescript@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes
