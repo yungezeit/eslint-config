@@ -1,5 +1,11 @@
 # @yungezeit/eslint-config-base
 
+## 0.0.8
+
+### Patch Changes
+
+- b47d8f5: Fixed rule typo for TypeScript ESLint config
+
 ## 0.0.7
 
 ### Patch Changes

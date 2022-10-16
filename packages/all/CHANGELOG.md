@@ -1,5 +1,18 @@
 # @yungezeit/eslint-config
 
+## 0.0.8
+
+### Patch Changes
+
+- b47d8f5: Fixed rule typo for TypeScript ESLint config
+- Updated dependencies [b47d8f5]
+  - @yungezeit/eslint-config-typescript@0.0.8
+  - @yungezeit/eslint-config-base@0.0.8
+  - @yungezeit/eslint-config-react@0.0.8
+  - @yungezeit/eslint-config-storybook@0.0.8
+  - @yungezeit/eslint-config-svelte@0.0.8
+  - @yungezeit/eslint-config-vue@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes
