@@ -37,7 +37,6 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'import/no-named-as-default': 'off',
         'import/no-cycle': 'off',
-
         // TypeScript overrides.
         'no-undef': 'off',
         'naming-convention': 'off',
@@ -51,11 +50,10 @@ module.exports = {
         '@typescript-eslint/quotes': ['error', 'single', { allowTemplateLiterals: true }],
         '@typescript-eslint/no-useless-constructor': ['error'],
         // TypeScript-specific rules.
-
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
-
+        '@typescript-eslint/consistent-type-import': 'error',
         // The following rules require `parseOptions.project` to be set.
         // This should be project-specific.
         'no-throw-literal': 'off',
