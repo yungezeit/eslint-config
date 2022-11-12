@@ -1,5 +1,11 @@
 # @yungezeit/eslint-config-base
 
+## 0.0.9
+
+### Patch Changes
+
+- 72eebdd: Added eslint-plugin-import to @yungezeit/typescript
+
 ## 0.0.8
 
 ### Patch Changes
