@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-vue
 
+## 0.0.9
+
+### Patch Changes
+
+- 72eebdd: Added eslint-plugin-import to @yungezeit/typescript
+- Updated dependencies [72eebdd]
+  - @yungezeit/eslint-config-typescript@0.0.9
+
 ## 0.0.8
 
 ### Patch Changes
