@@ -89,7 +89,7 @@ module.exports = {
     },
     // JSON files.
     {
-      files: ['*.json', '*.json5'],
+      files: ['*.json', '*.json5', '*.jsonc'],
       extends: ['plugin:jsonc/recommended-with-jsonc'],
     },
     // YAML files.

@@ -63,6 +63,8 @@ module.exports = {
         '@typescript-eslint/no-throw-literal': 'off',
         '@typescript-eslint/no-implied-eval': 'off',
         '@typescript-eslint/dot-notation': 'off',
+        // https://github.com/typescript-eslint/typescript-eslint/issues/1824
+        '@typescript-eslint/indent': 'off',
       },
     },
   ],
