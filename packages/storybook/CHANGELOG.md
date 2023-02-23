@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-storybook
 
+## 0.0.10
+
+### Patch Changes
+
+- b8572fc: Added JSONC support and disabled @typescript-eslint/indent rule to encourage using prettier instead
+- Updated dependencies [b8572fc]
+  - @yungezeit/eslint-config-base@0.0.10
+
 ## 0.0.9
 
 ### Patch Changes
