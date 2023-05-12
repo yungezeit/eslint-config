@@ -96,6 +96,9 @@ module.exports = {
     {
       files: ['*.yaml', '*.yml'],
       extends: ['plugin:yml/standard'],
+      rules: {
+        "yml/no-empty-mapping-value": "off"
+      }
     },
     // Markdown files.
     {
