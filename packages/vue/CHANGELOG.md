@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-vue
 
+## 0.0.12
+
+### Patch Changes
+
+- a95adf6: Upgraded eslint-plugin-import
+- Updated dependencies [a95adf6]
+  - @yungezeit/eslint-config-typescript@0.0.12
+
 ## 0.0.11
 
 ### Patch Changes

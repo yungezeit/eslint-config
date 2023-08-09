@@ -1,6 +1,6 @@
 {
   "name": "@yungezeit/eslint-config-react",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Personal React ESLint config",
   "author": "Charles Gruenais",
   "license": "MIT",
