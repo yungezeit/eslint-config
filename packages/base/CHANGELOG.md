@@ -1,5 +1,11 @@
 # @yungezeit/eslint-config-base
 
+## 0.0.11
+
+### Patch Changes
+
+- 28e6239: Removed no-empty-mapping-value rule for YML files
+
 ## 0.0.10
 
 ### Patch Changes

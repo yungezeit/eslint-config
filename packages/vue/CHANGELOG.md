@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-vue
 
+## 0.0.11
+
+### Patch Changes
+
+- 28e6239: Removed no-empty-mapping-value rule for YML files
+- Updated dependencies [28e6239]
+  - @yungezeit/eslint-config-typescript@0.0.11
+
 ## 0.0.10
 
 ### Patch Changes
