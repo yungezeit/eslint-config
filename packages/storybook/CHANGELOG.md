@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-storybook
 
+## 0.0.12
+
+### Patch Changes
+
+- a95adf6: Upgraded eslint-plugin-import
+- Updated dependencies [a95adf6]
+  - @yungezeit/eslint-config-base@0.0.12
+
 ## 0.0.11
 
 ### Patch Changes
