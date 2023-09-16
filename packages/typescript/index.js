@@ -65,6 +65,11 @@ module.exports = {
         '@typescript-eslint/dot-notation': 'off',
         // https://github.com/typescript-eslint/typescript-eslint/issues/1824
         '@typescript-eslint/indent': 'off',
+
+        // Who cares tbh, this gets really annoying when working with TypeScript's
+        // path aliases and remapping all these on a per-project basis would be
+        // overkill when this rule does not seem to bring much benefit.
+        'import/extensions': 'off'
       },
     },
   ],
