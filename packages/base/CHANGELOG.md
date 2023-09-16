@@ -1,5 +1,12 @@
 # @yungezeit/eslint-config-base
 
+## 0.0.13
+
+### Patch Changes
+
+- 093aaf7: Upgraded deps
+- 36afbd4: Definitively remove import/extensions
+
 ## 0.0.12
 
 ### Patch Changes

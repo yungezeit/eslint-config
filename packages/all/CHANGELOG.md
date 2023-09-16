@@ -1,5 +1,20 @@
 # @yungezeit/eslint-config
 
+## 0.0.13
+
+### Patch Changes
+
+- 093aaf7: Upgraded deps
+- 36afbd4: Definitively remove import/extensions
+- Updated dependencies [093aaf7]
+- Updated dependencies [36afbd4]
+  - @yungezeit/eslint-config-typescript@0.0.13
+  - @yungezeit/eslint-config-storybook@0.0.13
+  - @yungezeit/eslint-config-react@0.0.13
+  - @yungezeit/eslint-config-base@0.0.13
+  - @yungezeit/eslint-config-vue@0.0.13
+  - @yungezeit/eslint-config-svelte@0.0.13
+
 ## 0.0.12
 
 ### Patch Changes
