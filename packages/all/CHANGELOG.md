@@ -1,5 +1,18 @@
 # @yungezeit/eslint-config
 
+## 0.0.14
+
+### Patch Changes
+
+- 3122b24: Updated eslint-plugin-vue and prefered shorthand bindings
+- Updated dependencies [3122b24]
+  - @yungezeit/eslint-config-vue@0.0.14
+  - @yungezeit/eslint-config-base@0.0.14
+  - @yungezeit/eslint-config-react@0.0.14
+  - @yungezeit/eslint-config-storybook@0.0.14
+  - @yungezeit/eslint-config-svelte@0.0.14
+  - @yungezeit/eslint-config-typescript@0.0.14
+
 ## 0.0.13
 
 ### Patch Changes
