@@ -2,7 +2,7 @@
   "name": "@yungezeit/eslint-config-root",
   "version": "0.0.6",
   "private": true,
-  "packageManager": "pnpm@7.1.7",
+  "packageManager": "pnpm@8.5.0",
   "description": "Personal ESLint config presets based on airbnb rules and other recommended presets.",
   "author": "Charles Gruenais",
   "license": "MIT",
