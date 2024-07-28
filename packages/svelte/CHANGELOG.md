@@ -1,5 +1,13 @@
 # @yungezeit/eslint-config-svelte
 
+## 0.0.15
+
+### Patch Changes
+
+- 4257095: Change import rules
+- Updated dependencies [4257095]
+  - @yungezeit/eslint-config-typescript@0.0.15
+
 ## 0.0.14
 
 ### Patch Changes

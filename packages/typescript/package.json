@@ -1,6 +1,6 @@
 {
   "name": "@yungezeit/eslint-config-typescript",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Personal TypeScript ESLint config",
   "author": "Charles Gruenais",
   "license": "MIT",
