@@ -13,21 +13,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
 
-      - uses: pnpm/action-setup@v2.2.2
+      - uses: pnpm/action-setup@v4
         with:
-          version: 7
+          version: 8
 
       - name: Get pnpm store directory
         id: pnpm-cache
+        shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
@@ -35,7 +36,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: Enable peerdeps auto-install
+        shell: bash
+        run: pnpm config set auto-install-peers true
+
       - name: Install dependencies
+        shell: bash
         run: pnpm install --no-frozen-lockfile
 
       - name: Create Release Pull Request or Publish to npm
