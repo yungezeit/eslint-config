@@ -1,5 +1,11 @@
 # @yungezeit/eslint-config-base
 
+## 0.0.15
+
+### Patch Changes
+
+- 4257095: Change import rules
+
 ## 0.0.14
 
 ### Patch Changes
