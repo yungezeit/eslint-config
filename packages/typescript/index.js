@@ -53,7 +53,8 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+
         // The following rules require `parseOptions.project` to be set.
         // This should be project-specific.
         'no-throw-literal': 'off',
